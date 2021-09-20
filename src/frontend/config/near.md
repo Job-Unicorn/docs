@@ -1,5 +1,7 @@
 # NEAR
 
+![Banner](https://user-images.githubusercontent.com/64161383/133971770-4e8d4526-3175-4ad5-8265-fe5fc58389ab.png)
+
 ### Interface `NearConfig`
 
 - `networkId`: string
