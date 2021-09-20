@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="getting-started.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="getting-started.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="frontend/index.html"><strong aria-hidden="true">3.</strong> Frontend</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="frontend/utils/index.html"><strong aria-hidden="true">3.1.</strong> Utils</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="frontend/utils/near.html"><strong aria-hidden="true">3.1.1.</strong> NEAR</a></li></ol></li><li class="chapter-item expanded "><a href="frontend/config/index.html"><strong aria-hidden="true">3.2.</strong> Config</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="frontend/config/near.html"><strong aria-hidden="true">3.2.1.</strong> NEAR</a></li></ol></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -163,6 +163,123 @@ yarn dev
 <pre><code class="language-bash">git clone https://github.com/Job-Unicorn/client.git
 cd client
 docker-compose up -d
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frontend"><a class="header" href="#frontend">Frontend</a></h1>
+<p>The frontend is made using <a href="https://facebook.github.io/react/">React</a> and <a href="https://nextjs.org/">Next.js</a>.</p>
+<p>The state management is done using <a href="https://reactjs.org/docs/context.html">Context API</a>.</p>
+<p>The UI library used is <a href="https://chakra-ui.com/">Chakra UI</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="utils"><a class="header" href="#utils">Utils</a></h1>
+<p>The utility functions can be found in the <a href="https://github.com/Job-Unicorn/client/tree/prod/utils">utils folder</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="near"><a class="header" href="#near">NEAR</a></h1>
+<h3 id="function-init"><a class="header" href="#function-init">function <code>init()</code></a></h3>
+<blockquote>
+<p>This function initializes the <code>near</code> module.</p>
+</blockquote>
+<p>Tasks performed by this function:</p>
+<ul>
+<li>Initialize the <code>near</code> module.</li>
+<li>Adds the near object to the window object.</li>
+<li>Creates the <code>jobUnicornWalletConnection</code> object and adds the <code>jobUnicornWalletConnection</code> object to the window object.</li>
+<li>Gets the <code>accountId</code> from the <code>jobUnicornWalletConnection</code> object.</li>
+<li>Adds the <code>accountId</code> to the window object.</li>
+</ul>
+<h3 id="function-getwalletconnection"><a class="header" href="#function-getwalletconnection">function <code>getWalletConnection()</code></a></h3>
+<blockquote>
+<p>This function returns the <code>jobUnicornWalletConnection</code> object.</p>
+</blockquote>
+<p>Tasks performed by this function:</p>
+<ul>
+<li>Gets the <code>jobUnicornWalletConnection</code> object from the window object and returns it.</li>
+</ul>
+<h3 id="function-login"><a class="header" href="#function-login">function <code>login()</code></a></h3>
+<blockquote>
+<p>This function logs in to the <code>jobUnicornWalletConnection</code> object.</p>
+</blockquote>
+<p>Tasks performed by this function:</p>
+<ul>
+<li>Requests Sign In in to the <code>jobUnicornWalletConnection</code> object.</li>
+</ul>
+<h3 id="function-logout"><a class="header" href="#function-logout">function <code>logout()</code></a></h3>
+<blockquote>
+<p>This function logs out of the <code>jobUnicornWalletConnection</code> object.</p>
+</blockquote>
+<p>Tasks performed by this function:</p>
+<ul>
+<li>Signs out of the <code>jobUnicornWalletConnection</code> object.</li>
+<li>Reloads the page.</li>
+</ul>
+<h3 id="function-getaddress"><a class="header" href="#function-getaddress">function <code>getAddress()</code></a></h3>
+<blockquote>
+<p>This function gets the address of the <code>jobUnicornWalletConnection</code> object.</p>
+</blockquote>
+<p>Tasks performed by this function:</p>
+<ul>
+<li>Gets the address of the <code>jobUnicornWalletConnection</code> object.</li>
+<li>Returns the address.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="config"><a class="header" href="#config">Config</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="near-1"><a class="header" href="#near-1">NEAR</a></h1>
+<h3 id="interface-nearconfig"><a class="header" href="#interface-nearconfig">Interface <code>NearConfig</code></a></h3>
+<ul>
+<li>
+<p><code>networkId</code>: string</p>
+</li>
+<li>
+<p><code>nodeUrl</code>: string</p>
+</li>
+<li>
+<p><code>masterAccount?</code>: string </p>
+</li>
+<li>
+<p><code>walletUrl?</code>: string </p>
+</li>
+<li>
+<p><code>helperUrl?</code>: string </p>
+</li>
+<li>
+<p><code>explorerUrl?</code>: string </p>
+</li>
+<li>
+<p><code>keyPath?</code>: string </p>
+</li>
+</ul>
+<h3 id="function-getconfig"><a class="header" href="#function-getconfig">function <code>getConfig()</code></a></h3>
+<blockquote>
+<p>This function returns the current configuration according to the environment.</p>
+</blockquote>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><code>env</code> : <code>&quot;TEST</code>&quot; or <code>&quot;MAIN&quot;</code></li>
+</ul>
+<p>Tasks performed by this function:</p>
+<ul>
+<li>
+<p>If the environment is <code>&quot;TEST&quot;</code>, the configuration is loaded from the file <code>TESTNET_CONFIG</code>.</p>
+</li>
+<li>
+<p>If the environment is <code>&quot;MAIN&quot;</code>, the configuration is loaded from the file <code>MAINNET_CONFIG</code>.</p>
+</li>
+<li>
+<p>Otherwise throws an error.</p>
+</li>
+</ul>
+<h3 id="mainnet-configuration"><a class="header" href="#mainnet-configuration">Mainnet Configuration</a></h3>
+<pre><code class="language-ts">const MAINNET_CONFIG : NearConfig = {
+  networkId: 'mainnet',
+  nodeUrl: 'https://rpc.mainnet.near.org',
+  walletUrl: 'https://wallet.near.org',
+  helperUrl: 'https://helper.mainnet.near.org',
+  explorerUrl: 'https://explorer.mainnet.near.org',
+}
+</code></pre>
+<h3 id="testnet-configuration"><a class="header" href="#testnet-configuration">Testnet Configuration</a></h3>
+<pre><code class="language-ts">const TESTNET_CONFIG : NearConfig = {
+  networkId: 'testnet',
+  nodeUrl: 'https://rpc.testnet.near.org',
+  walletUrl: 'https://wallet.testnet.near.org',
+  helperUrl: 'https://helper.testnet.near.org',
+  explorerUrl: 'https://explorer.testnet.near.org',
+}
 </code></pre>
 
                     </main>

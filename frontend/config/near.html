@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Getting Started - Job Unicorn</title>
+        <title>NEAR - Job Unicorn</title>
                 
 
         <!-- Custom HTML head -->
@@ -14,21 +14,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-                <link rel="icon" href="favicon.svg">
-                        <link rel="shortcut icon" href="favicon.png">
-                <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-                <link rel="stylesheet" href="css/print.css" media="print">
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
         
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-                <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
         
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         
@@ -36,7 +36,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
+            var path_to_root = "../../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="getting-started.html" class="active"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="frontend/index.html"><strong aria-hidden="true">3.</strong> Frontend</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="frontend/utils/index.html"><strong aria-hidden="true">3.1.</strong> Utils</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="frontend/utils/near.html"><strong aria-hidden="true">3.1.1.</strong> NEAR</a></li></ol></li><li class="chapter-item expanded "><a href="frontend/config/index.html"><strong aria-hidden="true">3.2.</strong> Config</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="frontend/config/near.html"><strong aria-hidden="true">3.2.1.</strong> NEAR</a></li></ol></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../getting-started.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="../../frontend/index.html"><strong aria-hidden="true">3.</strong> Frontend</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../frontend/utils/index.html"><strong aria-hidden="true">3.1.</strong> Utils</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../frontend/utils/near.html"><strong aria-hidden="true">3.1.1.</strong> NEAR</a></li></ol></li><li class="chapter-item expanded "><a href="../../frontend/config/index.html"><strong aria-hidden="true">3.2.</strong> Config</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../frontend/config/near.html" class="active"><strong aria-hidden="true">3.2.1.</strong> NEAR</a></li></ol></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -114,7 +114,7 @@
                     <h1 class="menu-title">Job Unicorn</h1>
 
                     <div class="right-buttons">
-                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                                                                         
@@ -143,33 +143,78 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h1>
-<h2 id="setting-up--without-docker"><a class="header" href="#setting-up--without-docker">Setting up  without Docker</a></h2>
-<pre><code class="language-bash">git clone https://github.com/Job-Unicorn/client.git
-cd client
-yarn
-yarn dev
+                        <h1 id="near"><a class="header" href="#near">NEAR</a></h1>
+<h3 id="interface-nearconfig"><a class="header" href="#interface-nearconfig">Interface <code>NearConfig</code></a></h3>
+<ul>
+<li>
+<p><code>networkId</code>: string</p>
+</li>
+<li>
+<p><code>nodeUrl</code>: string</p>
+</li>
+<li>
+<p><code>masterAccount?</code>: string </p>
+</li>
+<li>
+<p><code>walletUrl?</code>: string </p>
+</li>
+<li>
+<p><code>helperUrl?</code>: string </p>
+</li>
+<li>
+<p><code>explorerUrl?</code>: string </p>
+</li>
+<li>
+<p><code>keyPath?</code>: string </p>
+</li>
+</ul>
+<h3 id="function-getconfig"><a class="header" href="#function-getconfig">function <code>getConfig()</code></a></h3>
+<blockquote>
+<p>This function returns the current configuration according to the environment.</p>
+</blockquote>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><code>env</code> : <code>&quot;TEST</code>&quot; or <code>&quot;MAIN&quot;</code></li>
+</ul>
+<p>Tasks performed by this function:</p>
+<ul>
+<li>
+<p>If the environment is <code>&quot;TEST&quot;</code>, the configuration is loaded from the file <code>TESTNET_CONFIG</code>.</p>
+</li>
+<li>
+<p>If the environment is <code>&quot;MAIN&quot;</code>, the configuration is loaded from the file <code>MAINNET_CONFIG</code>.</p>
+</li>
+<li>
+<p>Otherwise throws an error.</p>
+</li>
+</ul>
+<h3 id="mainnet-configuration"><a class="header" href="#mainnet-configuration">Mainnet Configuration</a></h3>
+<pre><code class="language-ts">const MAINNET_CONFIG : NearConfig = {
+  networkId: 'mainnet',
+  nodeUrl: 'https://rpc.mainnet.near.org',
+  walletUrl: 'https://wallet.near.org',
+  helperUrl: 'https://helper.mainnet.near.org',
+  explorerUrl: 'https://explorer.mainnet.near.org',
+}
 </code></pre>
-<h2 id="setting-up-locally-with-docker"><a class="header" href="#setting-up-locally-with-docker">Setting up locally with Docker</a></h2>
-<p>Have Docker and Docker Compose installed.</p>
-<p>Here is a link which will install Docker and Docker Compose on your machine:</p>
-<p><a href="https://docs.docker.com/compose/install/">https://docs.docker.com/compose/install/</a></p>
-<pre><code class="language-bash">git clone https://github.com/Job-Unicorn/client.git
-cd client
-docker-compose up -d
+<h3 id="testnet-configuration"><a class="header" href="#testnet-configuration">Testnet Configuration</a></h3>
+<pre><code class="language-ts">const TESTNET_CONFIG : NearConfig = {
+  networkId: 'testnet',
+  nodeUrl: 'https://rpc.testnet.near.org',
+  walletUrl: 'https://wallet.testnet.near.org',
+  helperUrl: 'https://helper.testnet.near.org',
+  explorerUrl: 'https://explorer.testnet.near.org',
+}
 </code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="../../frontend/config/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="frontend/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -177,13 +222,10 @@ docker-compose up -d
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="../../frontend/config/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="frontend/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
                             </nav>
 
         </div>
@@ -196,13 +238,13 @@ docker-compose up -d
         </script>
         
         
-                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
         
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
         
