@@ -2,7 +2,7 @@
 
 ### function `init()`
 
-This function initializes the `near` module.
+> This function initializes the `near` module.
 
 Tasks performed by this function:
 
@@ -14,7 +14,7 @@ Tasks performed by this function:
 
 ### function `getWalletConnection()`
 
-This function returns the `jobUnicornWalletConnection` object.
+> This function returns the `jobUnicornWalletConnection` object.
 
 Tasks performed by this function:
 
@@ -22,7 +22,7 @@ Tasks performed by this function:
 
 ### function `login()`
 
-This function logs in to the `jobUnicornWalletConnection` object.
+> This function logs in to the `jobUnicornWalletConnection` object.
 
 Tasks performed by this function:
 
@@ -30,7 +30,7 @@ Tasks performed by this function:
 
 ### function `logout()`
 
-This function logs out of the `jobUnicornWalletConnection` object.
+> This function logs out of the `jobUnicornWalletConnection` object.
 
 Tasks performed by this function:
 
@@ -39,7 +39,7 @@ Tasks performed by this function:
 
 ### function `getAddress()`
 
-This function gets the address of the `jobUnicornWalletConnection` object.
+> This function gets the address of the `jobUnicornWalletConnection` object.
 
 Tasks performed by this function:
 
